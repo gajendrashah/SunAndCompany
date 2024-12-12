@@ -1,0 +1,114 @@
+{% load static %}
+{% include "header.html" %} 
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item ">About</li>
+            <li class="breadcrumb-item active text-primary">Introduction </li>
+        </ol>    
+    </div>
+</div>
+<!-- Header End -->
+ <!-- About Start -->
+ <div class="container-fluid overflow-hidden about py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="about-item">
+                    <div class="pb-5">
+                        <h1 class="display-5 text-capitalize">About <span class="text-primary">Son & Comp</span></h1>
+                        <hr>
+                        <p class="mb-0 text-secondery" style="text-align: justify;">
+                            Sun & Company is a leading manpower placement agency based in Kathmandu, Nepal, with over two decades of experience in connecting skilled, semi-skilled, and unskilled workers with international employers. We are dedicated to offering top-notch recruitment solutions that meet the specific needs of employers from various industries across the globe, including construction, hospitality, healthcare, and more.
+                            <br>
+                            Our commitment to excellence is reflected in our stringent worker selection process, timely deployment, and unwavering focus on worker performance and medical fitness. We take pride in our excellent track record and our ability to promptly provide high-quality service, ensuring that both employers and workers have a seamless experience.
+                            <br>
+                            Through strategic partnerships and a deep understanding of the global job market, we have successfully placed thousands of Nepali workers in countries such as the Gulf States, Malaysia, Singapore, and beyond. Our recruitment process covers everything from worker identification and CV preparation to medical checks, orientation, and deployment.
+                            <br>
+                            1At Sun & Company, we believe in continuous improvement and are dedicated to upgrading our management and processes to better serve our clients. Our professional team is committed to providing personalized services that uphold the highest standards of integrity and reliability.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                <div class="about-img">
+                    <div class="img-1">
+                        <img src="{% static "img/about-img.jpg" %}" class="img-fluid rounded h-100 w-100" alt="">
+                    </div>
+                    <div class="img-2">
+                        <img src="{% static "img/about-img-1.jpg" %}" class="img-fluid rounded w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+<div class="container card mb-3 p-3" >
+    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+        <h4 class="display-5 text-capitalize mb-3">Our<span class="text-primary"> Objective </span></h4>
+        <p class="mb-0">Our main objective at Sun & Company is to achieve Client Satisfac- tion by working as partners with our esteemed Clients to fulfill Client needs & worker demands. We strive to achieve this by adver- tising Client demand for workers, worker bio-data screening, worker interview in collaboration with Client Delegates before final selec- tion, etc. We undertake all processes from selection to deployment of QUALITY workers to the satisfaction of our Clients
+        </p>
+    </div>
+    <div class="row" >
+        <div class="col-md-4" >
+            <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Mission </h5>
+                  <p class="card-text">Our mission is to provide the most competent worker candidates to our clients. This is based on our years of experienced professionalism, mutual trust and integrity. </p>
+                  
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Vision</h5>
+                  <p class="card-text">Our vision is to establish a UNIQUE STANDARD in the recruitment industry by providing a one stop solution on behalf of our client to provide the most competent worker in his/her category, provide training and deploy workers to begin to work from day one.</p>
+                  
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Commitment</h5>
+                  <ul>
+                    <li>WORKER MEDICAL FITNESS UPON ARRIVAL TO HOST COUNTRY</li>
+                    <li>WORKER PERFORMANCE</li>
+                    <li>WORKER TIMELY DEPLOYMENT UNLESS SITUATION OUT OF OUR CONTROL</li>
+                  </ul>
+                  
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style="align-items: center;">
+            <img src="{% static 'img/whyus.png' %}" class="img-fluid" alt="">
+        </div>
+    </div>
+</div>
+<!-- Banner Start -->
+<div class="container-fluid banner pb-5 wow zoomInDown" data-wow-delay="0.1s">
+    <div class="container pb-5">
+        <div class="banner-item rounded">
+            <img src="{% static 'img/banner-1.jpg' %}" class="img-fluid rounded w-100" alt="">
+            <div class="banner-content">
+                <h2 class="text-primary">Rent Your Car</h2>
+                <h1 class="text-white">Interested in Renting?</h1>
+                <p class="text-white">Don't hesitate and send us a message.</p>
+                <div class="banner-btn">
+                    <a href="#" class="btn btn-secondary rounded-pill py-3 px-4 px-md-5 me-2">WhatchApp</a>
+                    <a href="#" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner End -->
+{% include "footer.html" %}

@@ -1,0 +1,74 @@
+{% load static %}
+{% include "header.html" %} 
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item ">About</li>
+            <li class="breadcrumb-item active text-primary">Testimonials</li>
+        </ol>    
+    </div>
+</div>
+<!-- Header End -->
+ <!-- Testimonial Start -->
+ <div class="container-fluid testimonial pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h1 class="display-5 text-capitalize mb-3">Our Clients<span class="text-primary"> Riviews</span></h1>
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+            </p>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            
+            {% for rev in allreview %}                            
+                <div class="testimonial-item">
+                    <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="testimonial-inner p-4">
+                        <img src="{{ rev.reviewImage.url }}" class="img-fluid" alt="">
+                        <div class="ms-4">
+                            <h4>{{rev.reviewName }}</h4>
+                            <p>{{rev.reviewProfession}}</p>
+                            <div class="d-flex text-primary">
+                                
+                                {% for i in my_range  %}
+                                    {% if i < rev.reviewStart %}
+                                        <i class="fas fa-star"></i>
+                                    {% else %}
+                                        <i class="fas fa-star text-body"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top rounded-bottom p-4">
+                        <p class="mb-0">{{rev.reviewReview}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+ <!-- Banner Start -->
+ <div class="container-fluid banner pb-5 wow zoomInDown" data-wow-delay="0.1s">
+    <div class="container pb-5 mt-2">
+        <div class="banner-item rounded">
+            <img src="{% static 'img/banner-1.jpg' %}" class="img-fluid rounded w-100" alt="">
+            <div class="banner-content">
+                <h2 class="text-primary">Book You Place</h2>
+                <h1 class="text-white">Interested in Abroad Work?</h1>
+                <p class="text-white">Don't hesitate and send us a message.</p>
+                <div class="banner-btn">
+                    <a href="#" class="btn btn-secondary rounded-pill py-3 px-4 px-md-5 me-2">WhatchApp</a>
+                    <a href="#" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner End -->
+
+{% include "footer.html" %}
